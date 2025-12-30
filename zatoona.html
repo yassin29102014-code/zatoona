@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 10px;
+            width: 200px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Enter Password</h2>
+    <input type="text" id="password" placeholder="Password">
+    <br>
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error" class="error"></p>
+</div>
+
+<script>
+    function checkPassword() {
+        const correctPassword = "Zatoona w Rahofto"; // CHANGE THIS
+        const userPassword = document.getElementById("password").value;
+
+        if (userPassword === correctPassword) {
+            window.location.href = "page3.html";
+        } else {
+            document.getElementById("error").textContent = "Wrong password!";
+        }
+    }
+</script>
+
+</body>
+</html>
